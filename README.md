@@ -20,8 +20,8 @@ RESTful API for hotel management: hotel listing/search, detailed hotel profiles,
 mvn clean install
 mvn spring-boot:run
 ```
-- [Swagger UI](http://localhost:8092/property-view/swagger-ui.html)
-- [OpenAPI JSON](http://localhost:8092/property-view/api-docs)
+- Swagger UI: [http://localhost:8092/property-view/swagger-ui.html](http://localhost:8092/property-view/swagger-ui.html)
+- OpenAPI JSON: [http://localhost:8092/property-view/api-docs](http://localhost:8092/property-view/api-docs)
 
 ## Packages
 
