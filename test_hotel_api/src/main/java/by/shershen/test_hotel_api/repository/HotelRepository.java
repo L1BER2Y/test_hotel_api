@@ -9,15 +9,15 @@ import java.util.List;
 
 public interface HotelRepository extends JpaRepository<Hotel, Long>, JpaSpecificationExecutor<Hotel> {
 
-    @Query("SELECT h.brand, COUNT(h) FROM Hotel h GROUP BY h.brand")
+    @Query("SELECT h.brand, COUNT(h) FROM Hotel h GROUP BY h.brand ORDER BY h.brand")
     List<Object[]> countByBrand();
 
-    @Query("SELECT h.address.city, COUNT(h) FROM Hotel h GROUP BY h.address.city")
+    @Query("SELECT h.address.city, COUNT(h) FROM Hotel h GROUP BY h.address.city ORDER BY h.brand")
     List<Object[]> countByCity();
 
-    @Query("SELECT h.address.country, COUNT(h) FROM Hotel h GROUP BY h.address.country")
+    @Query("SELECT h.address.country, COUNT(h) FROM Hotel h GROUP BY h.address.country ORDER BY h.brand")
     List<Object[]> countByCountry();
 
-    @Query("SELECT a.name, COUNT(h) FROM Hotel h JOIN h.amenities a GROUP BY a.name")
+    @Query("SELECT a.name, COUNT(h) FROM Hotel h JOIN h.amenities a GROUP BY a.name ORDER BY h.brand")
     List<Object[]> countByAmenity();
 }
